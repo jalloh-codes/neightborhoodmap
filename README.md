@@ -9,7 +9,7 @@
  * react-google-maps
  * FourSquare API
 
-# How to start the
+# How to start the application
  * clone the project to your computer make sure you have Node.js and React installed
  * cd to the project folder and type `npm install` on your terminal
  * after the dependencies is downloaded type `npm start`
