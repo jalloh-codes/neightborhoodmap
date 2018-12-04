@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+// the li tag location icon and name 
 class ListItem extends Component {
     render() {
         return(

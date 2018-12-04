@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ListItem from './Item';
 
+
+// it add the <li> tag from ListItem and make it clikable to view the location marker
 class VenueList extends Component {
     render() {
         return(

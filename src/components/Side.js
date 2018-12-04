@@ -39,6 +39,7 @@ class Side extends Component {
 
     render() {
         return(
+            // the side bar menu that contain the filter input and venues datails
             <nav  aria-label="sidebar menu" className='sideBar'>
                 <p>Bart Location</p>
                 <input aria-label='filter locations' tabIndex="0" type={'search'} id={'search'} placeholder={'Filter'}

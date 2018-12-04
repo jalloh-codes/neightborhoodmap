@@ -3,6 +3,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "reac
 
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+    // customizing the map, center it based of the venues locations
   <GoogleMap
     role="application"
     aria-label="Google Map"
@@ -15,6 +16,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
         props.markers.filter(marker => marker.isVisble).map((marker, id) => {
             const venueInfo = props.venues.find(venue => venue.id === marker.id);
             return(
+                // add a markers that contain details about the location
                 <Marker
                 key={id}
                 position={{ lat: marker.lat, lng: marker.lng }}

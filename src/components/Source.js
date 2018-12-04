@@ -1,3 +1,6 @@
+// this file collect data from FourSquare
+// it collect food locations in the new york city area
+
 class Source {
     static baseURL(){
         return 'https://api.foursquare.com/v2';
@@ -18,10 +21,6 @@ class Source {
         }
     }
     static simpleFetch(endPiont, method, url){
-        // let requestData = {
-        //     method,
-        //     header: Source.header()
-        // };
         return fetch(`${Source.baseURL()}${endPiont}?${Source.auth()}&${Source.urlBuilder(
             url
         )}`).then(res => res.json())

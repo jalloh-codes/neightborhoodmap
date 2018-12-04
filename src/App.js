@@ -22,7 +22,7 @@ class App extends Component {
     }
 
 
-    // close the
+    // close the a marker is open
     closeMarker = () => {
         const markers = this.state.markers.map(marker =>{
             marker.isOpen = false;
@@ -44,16 +44,19 @@ class App extends Component {
         })
     }
 
+    // when venues list is click under the menu it open the targeted location marker
     controlListClick = venue => {
         const marker = this.state.markers.find(marker => marker.id === venue.id);
         this.controlMarker(marker)
     }
-
+    // set the sideBar true or false
     handleSideBarOpen = () =>{
         this.setState((prevState) => {
             return {sideBarOpen: !prevState.sideBarOpen}
         });
     }
+
+    //collecting locations informtions
     componentDidMount(){
         API.search({
             query: 'food',
@@ -78,6 +81,7 @@ class App extends Component {
     }
 
     render() {
+        // help control the sideBar menu by targeting the header button
         let sideOpen;
         if(this.state.sideBarOpen){
             sideOpen =<Side {...this.state} controlListClick={this.controlListClick}/>;
