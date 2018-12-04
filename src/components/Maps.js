@@ -18,17 +18,20 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
                 <Marker
                 key={id}
                 position={{ lat: marker.lat, lng: marker.lng }}
+                animation= {window.google.maps.Animation.DROP}
                 onClick={() => props.controlMarker(marker)}
+
                 >
                     {marker.isOpen &&
                         venueInfo.bestPhoto && (
                         <InfoWindow>
                             <React.Fragment>
-                                <img src={`${venueInfo.bestPhoto.prefix}100x100${venueInfo.bestPhoto.suffix}`} alt={"image of venue"}/>
+                                <img src={`${venueInfo.bestPhoto.prefix}100x100${venueInfo.bestPhoto.suffix}`} alt={`${venueInfo.name}`}/>
                                 <p> {venueInfo.name}</p>
                                 <p> {venueInfo.location.address}</p>
                             </React.Fragment>
                         </InfoWindow>
+                        // Data collected from FourSquare
                     )}
                 </Marker>
             );

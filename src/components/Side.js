@@ -39,9 +39,9 @@ class Side extends Component {
 
     render() {
         return(
-            <nav  aria-labe="sidebar menu" className='sideBar'>
+            <nav  aria-label="sidebar menu" className='sideBar'>
                 <p>Bart Location</p>
-                <input typ={'search'} id={'search'} placeholder={'Filter'}
+                <input aria-label='filter locations' tabIndex="0" type={'search'} id={'search'} placeholder={'Filter'}
                 onChange={this.handleChange}/>
                 <VenueList
                 {...this.props}

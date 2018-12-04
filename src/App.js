@@ -14,13 +14,15 @@ class App extends Component {
             markers:[],
             center: [],
             zoom: 12,
-            sideBarClose: true,
             sideBarOpen: false,
             updateState: obj => {
                 this.setState(obj)
             }
         };
     }
+
+
+    // close the
     closeMarker = () => {
         const markers = this.state.markers.map(marker =>{
             marker.isOpen = false;
@@ -36,7 +38,10 @@ class App extends Component {
         API.getVenuesDetails(marker.id).then(res => {
             const newVenue = Object.assign(venue, res.response.venue);
             this.setState({venues: Object.assign(this.state.venues, newVenue)});
-        });
+        })
+        .catch(error => {
+            console.log('Error loading venue details', error);
+        })
     }
 
     controlListClick = venue => {
@@ -66,6 +71,9 @@ class App extends Component {
                 };
             });
             this.setState({ venues, center, markers})
+        })
+        .catch((err) =>{
+            console.log(`Data not loading  ${err}`);
         });
     }
 

@@ -18,10 +18,10 @@ class Source {
         }
     }
     static simpleFetch(endPiont, method, url){
-        let requestData = {
-            method,
-            header: Source.header()
-        };
+        // let requestData = {
+        //     method,
+        //     header: Source.header()
+        // };
         return fetch(`${Source.baseURL()}${endPiont}?${Source.auth()}&${Source.urlBuilder(
             url
         )}`).then(res => res.json())
@@ -48,3 +48,4 @@ export default class API {
         return Source.simpleFetch(`/venues/${VID}/photos`, "GET");
     }
 }
+// venues Data from FourSquare

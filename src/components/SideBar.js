@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SideButt from './SideButt';
 
 const SideBar = props =>(

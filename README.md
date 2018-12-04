@@ -14,3 +14,7 @@
  * cd to the project folder and type `npm install` on your terminal
  * after the dependencies is downloaded type `npm start`
  * open your browser type `http://localhost:3000/`
+
+# This is steps are for the  `Service Worker`.
+    * On your terminal type `npm run build` and then `npm install -g serve`
+    * After the download type `serve -s build` Browse to `http://localhost:5000`
