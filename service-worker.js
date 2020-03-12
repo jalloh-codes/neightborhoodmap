@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/jalloh-codes/neightborhoodmap.io/precache-manifest.8401327541158da1360c99d7596fa09f.js"
+  "/neightborhoodmap/precache-manifest.22688028604f6704787ada4609926a1f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/jalloh-codes/neightborhoodmap.io/index.html", {
+workbox.routing.registerNavigationRoute("/neightborhoodmap/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
